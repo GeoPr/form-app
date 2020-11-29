@@ -1,0 +1,24 @@
+.result {
+	// .result__body
+	&__body {
+		display: grid;
+		row-gap: 20px;
+	}
+	// .result__table
+	&__table {}
+	// .result__files
+	&__files {
+		background: #eee;
+		border-radius: 10px;
+		padding: 10px;
+	}
+	// .result__buttons
+	&__buttons {
+		display: flex;
+		button {
+			&:first-child {
+				margin: 0px 30px 0px 0px;
+			}
+		}
+	}
+}
