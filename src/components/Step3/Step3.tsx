@@ -6,13 +6,17 @@ import { useContextValue } from '../../state/state'
 import { FileInput } from '../FileInput/FileInput'
 
 interface IData {
-  files: FileList
+  files: FileList | null
 }
 
 export const Step3: React.FC = () => {
-  const { setState } = useContextValue()
+  const { state, setState } = useContextValue()
   const history = useHistory()
-  const { handleSubmit, control } = useForm<IData>()
+  const { handleSubmit, control } = useForm<IData>({
+    defaultValues: {
+      files: state.files
+    }
+  })
 
   const submitHandler = handleSubmit(({ files }) => {
     setState(prev => ({
