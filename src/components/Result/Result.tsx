@@ -70,7 +70,7 @@ export const Result: React.FC = () => {
       <div className="result__body">
         <div className="result__table">
           <Typography variant="h4" className={styles.title}>
-            Info
+            Info 🧾
           </Typography>
           <TableContainer component={Paper}>
             <Table
